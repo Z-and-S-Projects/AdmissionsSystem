@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href= "{{url_for('static',filename='styles/login.css') }}">
+
+
+    <title>update</title>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Zviko College</label>
+        <ul>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+        </ul>
+      </nav>
+    <center><h1>Student update<h1></center>
+
+    <center>
+        <form method= "POST" action="">
+            
+            <div class="form__fieldset" method= "POST" action="">
+                <label for="status" class="form__label">Status:</label>
+                {{form.status}}
+            </div>
+
+            <div class="form__submit" method= "POST" action="">
+                {{form.submit}}
+            </div >
+
+               
+        </form>
+    </center>
+        
+    
+
+
+ 
+</body>
+
+
+
+<style>
+    h1 {
+    color: wheat;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    padding: 10px;
+    width: 1120px; 
+    text-align: center;
+    background: rgba(8, 0, 0, 0.4);
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.5);
+}
+
+</style>
+</html>

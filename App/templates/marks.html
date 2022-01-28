@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href= "{{url_for('static',filename='styles/marks.css') }}">
+<head>   
+
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Zviko College</label>
+
+    <ul>
+      <li><a href="{{url_for('home')}}">Home</a</li>
+      <li><a href="{{url_for('course')}}">Courses</a></li>
+      <li><a href="{{url_for('adminlogout')}}">Click here to logout</a></li>
+    </ul>
+  
+  </nav>
+</head>
+
+
+
+<body>
+  
+
+  <center><h1>Welcome Admin</h1></center>
+  <center><h2>Student's Information</h2>
+  
+
+
+<div class="container">
+  <div class="row">
+      <table class="table table-hover table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Grade</th>
+          <th>Course</th>
+          <th>Status</th>
+          <th>Actions</th>
+
+        </tr>
+
+
+        
+        {% for row in User %}
+        <tr>
+          <td>{{row.id}}</td>
+          <td>{{row.username}}</td>
+          <td>{{row.email}}</td>
+          <td>{{row.gradeaverage}}</td>
+          <td>{{row.courses}}</td>
+          <td>{{row.status}}
+
+
+
+
+          <td>
+            <a href="/action/{{row.id}}" class="btn btn-warning btn-sm btn-outline-secondary" onclick="return confirm('Are You Sure To Accept/Decline ?')">Action</a>
+          </td>
+        </tr>
+        {% endfor %}
+
+
+       
+       
+
+</body>
+
+</html>

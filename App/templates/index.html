@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href= "{{url_for('static',filename='styles/style1.css') }}">
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Zviko College</label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="{{url_for('about')}}">About</a></li>
+        <li><a href="{{url_for('course')}}">Courses</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('register')}}">Apply</a></li>
+        <li><a href="{{url_for('admin')}}">Admin</a></li>
+        
+      </ul>
+    </nav>
+    
+    <section>
+      <center><p><br>
+        We at Zviko College<br>
+        See you not as a number but as THE FUTURE<br>
+        FUTURE ENGINEERS , FUTURE DEVELOPERS, FUTURE TEACHERS , FUTURE LAWYERS<br>
+        With us you can do Anything, be Anything.<br>
+        Our highy experienced staff of PHD Professors<br>
+        Teaching in our courses of<br>
+         B ed, <br> 
+         Bsc, <br> 
+         Bcom,<br>  
+         Btech,<br> 
+         BA.<br>
+         <br>
+        You have the unlimted option to pick your future, your future carrer.<br>
+        be apart of the Zviko family<br>
+        <br>
+    </section>
+  </body>
+</html>
